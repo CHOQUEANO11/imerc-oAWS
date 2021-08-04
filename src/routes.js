@@ -10,6 +10,8 @@ import AgendaController from './app/controllers/AgendaController';
 import SessionController from './app/controllers/SessionController';
 import AlunoEmailController from './app/controllers/AlunoEmailController';
 
+import CrfController from './app/controllers/CrfController';
+
 const routes = new Router();
 // Autenticação
 routes.post('/session', SessionController.store);
@@ -72,5 +74,9 @@ routes.get('/agenda', AgendaController.index);
 routes.get('/agenda/:id', AgendaController.show);
 routes.put('/agenda/:id', AgendaController.update);
 routes.delete('/agenda/:id', AgendaController.delete);
+
+// busca médicos
+routes.post('/medico', CrfController.store);
+
 
 export default routes;
